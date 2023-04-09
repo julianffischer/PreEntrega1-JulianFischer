@@ -1,0 +1,143 @@
+// NavBar
+.image-apple{
+    width: 30px;
+}
+// Shopping Cart
+.container__shopingCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 5px 5px;
+    border-radius: 999px;
+
+}
+.shoppingCart-number{
+    position: relative;
+    width: 0px;
+    top: 20px;
+    left: -30px;
+    
+}
+.shoppingCart {
+    width: 50px;
+}
+// ApplePresenting
+.container-iphone-14 {
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+}
+.container-iphone-14-img {
+margin: auto;
+width: 45%; }
+    .container-iphone-14-contenido-1 {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      flex-direction: column; }
+      .container-iphone-14-contenido-1-titulo {
+        font-size: 60px;
+        margin-top: 20px; }
+      .container-iphone-14-contenido-1-titulo-1 {
+        margin-top: -10px;
+        font-size: 30px; }
+      .container-iphone-14-contenido-1-titulo-2 {
+        color: #1472d0;
+        text-decoration: none;
+        margin-top: -20px;
+        font-size: 22px; }
+        .container-iphone-14-contenido-1-titulo-2:hover {
+          text-decoration: underline; }
+  
+  .container-iphone-14-pro {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 12px;
+    background-color: black; }
+    .container-iphone-14-pro-img {
+      margin: auto;
+      width: 45%; }
+    .container-iphone-14-pro-contenido-1 {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      flex-direction: column;
+      color: white; }
+      .container-iphone-14-pro-contenido-1-titulo {
+        font-size: 60px;
+        margin-top: 20px; }
+      .container-iphone-14-pro-contenido-1-titulo-1 {
+        margin-top: -10px;
+        font-size: 30px; }
+      .container-iphone-14-pro-contenido-1-titulo-2 {
+        color: #1472d0;
+        text-decoration: none;
+        margin-top: -20px;
+        font-size: 22px; }
+        .container-iphone-14-pro-contenido-1-titulo-2:hover {
+          text-decoration: underline; }
+  
+  .container-watch-series-8 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 12px;
+    background-color: black; }
+    .container-watch-series-8-img {
+      margin: auto;
+      width: 40%; }
+    .container-watch-series-8-contenido-1 {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      flex-direction: column;
+      color: white; }
+      .container-watch-series-8-contenido-1-titulo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 60px;
+        margin-top: 20px; }
+      .container-watch-series-8-contenido-1-titulo-1 {
+        color: #940000;
+        font-family: sans-serif;
+        margin-top: -10px;
+        font-size: 20px; }
+      .container-watch-series-8-contenido-1-titulo-2 {
+        color: #1472d0;
+        text-decoration: none;
+        margin-top: -20px;
+        margin-bottom: 40px;
+        font-size: 22px; }
+        .container-watch-series-8-contenido-1-titulo-2:hover {
+          text-decoration: underline; }
+
+/* contenedor de productos */
+.container__productos{
+    display: grid;
+    margin: 1rem;
+    gap: 1rem;
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr 1fr;
+   
+  }
+  /* background de productos */
+  .card-background{
+    background-color: black;
+  }
+  
+  .container__informacion--texto{
+    text-align: center;
+    // margin-bottom: 111px;
+  }
+  .img-productos{
+    margin-top: 9rem;
+    align-self: center;
+    width: 90%;
+  }
+  .background-ipad{
+    background-color:  #010101;
+  }

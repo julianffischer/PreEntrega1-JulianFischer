@@ -1,100 +1,45 @@
-import React from 'react'
-import airpodPicture from './assets/Airpod-pro.jpg'
-import ipadPicture from './assets/Ipad.jpg'
-import macAirPicture from './assets/Mac-air.jpg'
-import watchSeries8Picture from './assets/Watch Series 8-apple.jpg'
-import macbookProPicture from './assets/macbook-pro.jpg'
-import watchUltraApplePicture from './assets/Watch ultra-apple.jpg'
+import { useEffect, useState } from 'react'
+import { GetProducts, GetProductsByCategory} from '../../AsyncMock'
+import { ItemList } from '../ItemList/ItemList'
+
+import { useParams } from 'react-router-dom'
 
 
-export const ContainerList = ( {greeting} ) => {
+export const ItemContainerList = ( { greeting } ) => {
+
+  const [products, setProducts] = useState ([])
+
+  const {categoryId} = useParams ()
+
+  useEffect (()=>{
+    const AsyncFunction = categoryId ? GetProductsByCategory : GetProducts
+
+    AsyncFunction (categoryId)
+      .then (response =>{
+        setProducts(response) 
+      })
+      .catch (error =>{
+        console.log (error)
+      })
+  }, [categoryId])
+  
+  // useEffect (()=> {
+  //   GetProducts()
+  //   .then(response => {
+  //     setProducts (response)
+  //   })
+  //   .catch (error => {
+  //     console.log (error)
+  //   })
+  //   }, [])
+  
+
   return(
     <div>
       <h1>{ greeting }</h1>
-      <div className='container__productos'>
-      <div class=" card text-light card-background">
-            <img src={airpodPicture} class="card-img img-productos " alt="..."/>
-            <div class="card-img-overlay">
-              <div class="container__informacion--texto">
-                <h5 class="card-title ">Airpod Pro</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small>Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-          </div>
-          
-
-          {/* <!-- Contenedor ipad pro --> */}
-
-          
-          <div class=" card text-light card-background  ">
-            <img src={ipadPicture} class="card-img img-productos " alt="..."/>
-            <div class="card-img-overlay">
-              <div class="container__informacion--texto">
-                <h5 class="card-title ">Airpod Pro</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small>Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-          </div>
-        
-          
-           {/* <!-- Contenedor ipad --> */}
-        
-              {/* <!-- Contenedor Airpod --> */}
-              <div class=" card text-light card-background">
-                <img src={macAirPicture} class="card-img img-productos " alt="..."/>
-                <div class="card-img-overlay">
-                  <div class="container__informacion--texto">
-                    <h5 class="card-title ">Airpod Pro</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-              </div>
-  
-            {/* <!-- Contenedor ipad pro --> */}
-  
-            
-            <div class=" card text-light card-background">
-              <img src={macbookProPicture} class="card-img img-productos " alt="..."/>
-              <div class="card-img-overlay">
-                <div class="container__informacion--texto">
-                  <h5 class="card-title ">Airpod Pro</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                </div>
-              </div>
-            </div>   
-            {/* <!-- Contenedor Airpod --> */}
-           
-            <div class=" card text-light card-background">
-              <img src={watchSeries8Picture} class="card-img img-productos " alt="..."/>
-              <div class="card-img-overlay">
-                <div class="container__informacion--texto">
-                  <h5 class="card-title ">Airpod Pro</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                </div>
-              </div>
-            </div>
-  
-            {/* <!-- Contenedor ipad pro --> */}
-  
-            
-            <div class=" card text-light card-background">
-              <img src={watchUltraApplePicture} class="card-img img-productos " alt="..."/>
-              <div class="card-img-overlay">
-                <div class="container__informacion--texto">
-                  <h5 class="card-title ">Airpod Pro</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                  
-                </div>
-              </div>
-            </div>
-            
-            </div>
+        <div>
+          <ItemList products = {products}></ItemList>          
+        </div>
     </div>
   )
    

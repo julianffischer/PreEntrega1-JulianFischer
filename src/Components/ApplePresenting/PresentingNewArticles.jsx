@@ -2,8 +2,10 @@ import React from "react";
 import apple14Pro from "./assets/Iphone-14-pro.jpg"
 import watchSeries8 from "./assets/Watch Series 8-apple.jpg"
 import apple14 from "./assets/Iphone-14.jpg"
+import { ItemContainerList } from "../ItemListContainer/ItemListContainer";
 
-export const NewArticles = () => {
+
+export const Body = () => {
     return (
     <div>
         <div class="container-iphone-14">
@@ -35,6 +37,9 @@ export const NewArticles = () => {
                 <a href="#" class="container-watch-series-8-contenido-1-titulo-2"> Más información</a>
         </div>
         <img src={watchSeries8} alt="" class="container-watch-series-8-img"/>
+      </div>
+      <div>
+          <ItemContainerList/>
       </div>
     </div>
     )

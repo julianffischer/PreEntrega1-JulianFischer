@@ -1,0 +1,45 @@
+.Container{
+    margin: 1%;
+    width: 50%;
+}
+.ContainerButton{
+    display: flex;
+}
+.option{
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    color: white;
+    bottom: 0px;
+    left: 0%;
+    width: 50%;
+    padding: 10px 0px;
+    transition: all 0.3s ;
+
+    &:hover{
+        color: white;
+        background-color: rgba($color: #818181, $alpha: 0.3 );
+        text-decoration: underline;
+    }
+}
+.option2{
+    position: absolute;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+    color:white;
+    bottom: 0px;
+    right: 0%;
+    width: 50%;
+    padding: 10px 0px;
+    transition: all 0.3s;
+
+    &:hover{
+        color:white;
+        background-color: rgba($color: #818181, $alpha: 0.3 );
+        text-decoration: underline;
+    }
+}

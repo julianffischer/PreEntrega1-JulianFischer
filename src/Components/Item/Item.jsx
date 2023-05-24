@@ -1,8 +1,12 @@
 import React from 'react'
 import './assets/item.scss'
-import { ItemCount } from '../ItemCount/ItemCount'
 
-export const Item = ({ id, name, price, stock, description, image, category}) => {
+import { NavLink } from 'react-router-dom';
+
+
+
+export const Item = ({ name, price, stock, description, image, id}) => {
+
   return (
     <>
             <div class=" card text-light card-background containerProductosApple">
@@ -10,11 +14,9 @@ export const Item = ({ id, name, price, stock, description, image, category}) =>
                     <div class="card-img-overlay">
                     <div class="container__informacion--texto">
                         <h5 class="card-title ">{name}</h5>
-                        <p class="card-text">{description}</p>
-                        <p class="card-text-price"> price: <small>{price}</small></p>
                     </div>
             </div>
-                <ItemCount stock= {stock} valueInitial= {0} onAdd = {(item)=> {console.log (`La cantidad agregada es de ${item}`)}}/>
+              <NavLink to={`/item/${id} `} className='ButtonInformation' >More information</NavLink>
             </div>
     </>
   )

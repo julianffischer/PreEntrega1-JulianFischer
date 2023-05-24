@@ -1,9 +1,8 @@
-import { useState } from 'react';
+import { useState} from 'react';
 import './styles.scss'
 
 
 export const ItemCount = ({stock, valueInitial, onAdd}) => {
-
     const [item, setitem] = useState(valueInitial)
 
     const addCart = () => {
@@ -25,7 +24,7 @@ export const ItemCount = ({stock, valueInitial, onAdd}) => {
             <div className="number">{item}</div>
             <div className="Add-cart" onClick={addCart}> + </div>
             <div className="Out-cart" onClick={outCart}> - </div>
-            <button className='AddAll' onClick={()=>onAdd (item)} disabled = {(!stock) }>Agregar al carrito</button>     
+            <button className='AddAll' onClick={()=>onAdd (item) } disabled = {(!stock) }>Agregar al carrito</button>     
         </div>
     </div>
   )

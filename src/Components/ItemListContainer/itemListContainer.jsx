@@ -7,7 +7,7 @@ import { getDocs, collection, query, where } from 'firebase/firestore'
 import { db } from '../../services/firebaseconfig'
 import { Loader } from '../../Resources/Loader'
 
-export const ItemListContainer = ( { greeting } ) => {
+export const ItemListContainer = () => {
   const [products, setProducts] = useState ([])
   const [Loading, setLoading] = useState(true)
 
@@ -39,13 +39,10 @@ export const ItemListContainer = ( { greeting } ) => {
 
       return (
       <div>
-        <h1>{greeting}</h1>
-      <div>
         {Loading ? (
           <Loader></Loader>
             ) : (
           <ItemList products={products} />
         )}
-      </div>
     </div>
 );}

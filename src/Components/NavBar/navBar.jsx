@@ -33,13 +33,13 @@ export const NavBar = () => {
                         <NavLink  className="nav-link mx-2" to={`/category/headphones`}> airpods </NavLink>
                         </li>
                         <li className="nav-item">
-                        <NavLink className="nav-link mx-2" to={`/error`}> TV y Casa </NavLink>
+                        <NavLink className="nav-link mx-2" to={`/error`}> TV And Home </NavLink>
                         </li>
                         <li className="nav-item">
-                        <NavLink  className="nav-link mx-2" to={`/error`}>Soporte </NavLink>
+                        <NavLink  className="nav-link mx-2" to={`/error`}>Support </NavLink>
                         </li>
                         <li className="nav-item">
-                        <NavLink  className="nav-link mx-2" to={`/error`}>Dónde comprar </NavLink>
+                        <NavLink  className="nav-link mx-2" to={`/error`}>Where to buy</NavLink>
                         </li>
                         </ul>
                         

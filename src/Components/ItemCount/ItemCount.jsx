@@ -18,14 +18,14 @@ export const ItemCount = ({stock, valueInitial, onAdd}) => {
             alert ("No tienes éste producto en tu carrito")
         }
     }
-  return (
+    return (
     <div>
         <div className='button-shoppingCart'>
             <div className="number">{item}</div>
             <div className="Add-cart" onClick={addCart}> + </div>
             <div className="Out-cart" onClick={outCart}> - </div>
-            <button className='AddAll' onClick={()=>onAdd (item) } disabled = {(!stock) }>Agregar al carrito</button>     
+            <button className='AddAll' onClick={()=>onAdd (item) } disabled = {(!stock) }>Add to cart</button>     
         </div>
     </div>
-  )
+    )
 }

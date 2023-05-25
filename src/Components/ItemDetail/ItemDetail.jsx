@@ -38,7 +38,7 @@ export const ItemDetail = ({name, description, stock, price, image, id }) => {
         {quantityAdded > 0 ? (
           <>
           <div className="ContainerButton">
-            <Link to="/cart" className="option">Buy finish</Link>
+            <Link to="/cart" className="option">Checkout</Link>
             <Link to="/" className="option2">Continue shopping</Link>
           </div>
           </>

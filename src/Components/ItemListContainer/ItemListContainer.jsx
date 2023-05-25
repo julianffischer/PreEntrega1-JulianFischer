@@ -39,13 +39,10 @@ export const ItemListContainer = ( { greeting } ) => {
 
       return (
       <div>
-        <h1>{greeting}</h1>
-      <div>
         {Loading ? (
           <Loader></Loader>
             ) : (
           <ItemList products={products} />
         )}
-      </div>
     </div>
 );}
